@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: yg-jalnan;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+    } 
+
+@font-face {
+    font-family:museum;
+    src:url(../fonts/museum.eot);
+    src:url(../fonts/museum.woff) format('woff');
+}
+
+@font-face {
+    font-family:'scdream4';
+    src:url(../fonts/SCDream4.otf.eot);
+    src:url(../fonts/SCDream4.woff) format('woff');
+}
+
+@font-face {
+    font-family:'scdream5';
+    src:url(../fonts/SCDream5.otf.eot);
+    src:url(../fonts/SCDream5.woff) format('woff');
+}
+
+@font-face {
+    font-family:'scdream6';
+    src:url(../fonts/SCDream6.otf.eot);
+    src:url(../fonts/SCDream6.woff) format('woff');
+}
+
+
+* {margin:0; padding:0; box-sizing:border-box;}
+body{font-family:scdream4; font-size:15px; color:#333; background:#f2f2f2;}
+h1, h2, h3 {font-family:yg-jalnan;}
+ul li {float:left; list-style:none;}
+a {display:block; color:#333; text-decoration:none; border:0; outline:0;}
+button, .bt, .btn {
+	display:block; height:40px; margin:0 5px;  padding:0 25px; 
+	line-height:40px; border-radius:20px; outline:0; text-align:center;
+	 cursor: pointer;
+	 }
+.clear{clear:both;}
+.clear-footer{clear:both; margin-bottom:150px;}
+.flex-center {display:flex; justify-content:center; align-items: center;}
+.flex {
+	display: flex; align-items: center; justify-content: space-between;
+    margin-top: 30px;}
+.input-box {
+	display:block; width:100%; height:40px; padding:10px 20px;  
+	outline:0; border: 2px solid rgb(2 28 48 / 53%); border-radius:20px;
+	cursor: pointer;
+}
+
+.bt-red {transition:0.4s all ease;}
+.bt-red:hover {background:rgb(169, 3, 3); color:#FFF;  font-weight:bold;}
+.bt-blue { transition:0.4s all ease;}
+.bt-blue:hover {background:rgb(0, 0, 128); color:#FFF; font-weight:bold;}
+.bt-navy { transition:0.4s all ease;}
+.bt-navy:hover {background:rgb(23, 26, 40); color:#FFF; font-weight:bold;}
+.bt-green { transition:0.4s all ease;}
+.bt-green:hover {background	:rgb(2, 93, 2); color:#FFF; font-weight:bold;}
+.bt-orange { transition:0.4s all ease;}
+.bt-orange:hover {background:rgb(227, 122, 6); color:#FFF; font-weight:bold;}
+.bt-pink {transition:0.4s all ease;}
+.bt-pink:hover {background:rgb(255, 128, 255);  color:#FFF; font-weight:bold;}
+.bt-yellow {transition:0.4s all ease;}
+.bt-yellow:hover {background:rgb(217, 174, 18); color:#FFF; font-weight:bold;}
+.bt-brown {transition:0.4s all ease;}
+.bt-brown:hover {background:rgb(128, 64, 0); color:#FFF; font-weight:bold;}
+

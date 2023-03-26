@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* ===== 배너 + 타이틀 ===== */
+.ty-bn {position:relative;}
+.ty-bn h2 {
+    position:absolute; left:50%; width:560px; margin-left:-280px;
+    font-family:'museum'; font-weight:normal; color:#F2F2F2; line-height:50px;
+    text-align:center; text-transform:uppercase;
+}
+.ty-bn-sc-1 {color:#CCE8FD;}
+.ty-bn-sc-2 {color:#F4F7C5;}
+.ty-title-wrap h3 {font-family:'scdream6';  font-weight:normal; color:#021c30;}
+.ty-title-wrap p {font-family:'scdream4'; font-size:16px;}
+
+/* ===== 데스크톱 시작 ===== */
+#ty-tabBtn, .dogs {position:absolute;}
+#ty-tabBtn {
+    left:50%; width:200px; height:50px; 
+    font-family:'scdream4'; font-size:16px; color:#333; text-align:center; line-height:50px; 
+    background:#DDD; 
+    transition:all 0.2s ease; 
+}
+#ty-tabBtn:hover {background:rgba(215,45,45,0.3);}  
+#ty-tabBtn.second {margin-left:-100px; border-left:1px solid #F4F4F4;}
+#ty-tabBtn.third {margin-left:100px; border-left:1px solid #F4F4F4; border-radius: 0 5px 5px 0;}
+#ty-tabBtn.on {color:#F4F4F4; background:rgba(215,45,45,0.9);}
+#ty-tabBtn.on1 {margin-left:-300px; border-radius: 5px 0 0 5px;}
+
+/* ===== 카드 공통 ===== */
+.dogs .dog {
+    position:relative; float:left; width:400px; height:480px; margin:0 25px;
+    background:#FFF; border-radius:15px; overflow:hidden;    
+}
+.dogs .ty-bg {width:400px; height:340px;}
+.dogs .ty-text-wrap {padding:35px;}
+.dogs .ty-text-wrap h4 {font-family:'scdream5'; font-size:24px; font-weight:normal; line-height:24px;}
+.dogs .ty-txt-1 {padding-top:16px; line-height:18px; font-family:'scdream4';}
+/* ===== 소형카드 ===== */
+.ty-bg-1 {background:url(../imgs/types/ty-bg-1.jpg) center center; background-size:cover;}
+.ty-bg-2 {background:url(../imgs/types/ty-bg-2.jpg) center center; background-size:cover;}
+.ty-bg-3 {background:url(../imgs/types/ty-bg-3.jpg) center center; background-size:cover;}
+.ty-bg-4 {background:url(../imgs/types/ty-bg-4.jpg) center center; background-size:cover;}
+.ty-bg-5 {background:url(../imgs/types/ty-bg-5.jpg) center center; background-size:cover;}
+.ty-bg-6 {background:url(../imgs/types/ty-bg-6.jpg) center center; background-size:cover;}
+/* ===== 중형카드 ===== */
+.ty-bg-7 {background:url(../imgs/types/ty-bg-7.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-8 {background:url(../imgs/types/ty-bg-8.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-9 {background:url(../imgs/types/ty-bg-9.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-10 {background:url(../imgs/types/ty-bg-10.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-11 {background:url(../imgs/types/ty-bg-11.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-12 {background:url(../imgs/types/ty-bg-12.jpg) no-repeat center center; background-size:cover;}
+/* ===== 대형카드 ===== */
+.ty-bg-13 {background:url(../imgs/types/ty-bg-13.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-14 {background:url(../imgs/types/ty-bg-14.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-15 {background:url(../imgs/types/ty-bg-15.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-16 {background:url(../imgs/types/ty-bg-16.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-17 {background:url(../imgs/types/ty-bg-17.jpg) no-repeat center center; background-size:cover;}
+.ty-bg-18 {background:url(../imgs/types/ty-bg-18.jpg) no-repeat center center; background-size:cover;}
+/* ===== 카드 효과 ===== */
+.ty-front {position:absolute;}
+.ty-back {  
+    position:absolute; top:-500px; width:400px; height:480px;
+    color:#F2F2F2; text-align:center;
+    background:rgba(0,0,0,0.7); border-radius:15px;
+    transition:all 0.4s ease;
+}
+.ty-back h4 {
+    padding:200px 0 30px 0; 
+    font-family:'scdream5'; font-size:24px; font-weight:normal;
+    transition:all 0.4s ease 0.4s; opacity:0;
+}
+.ty-back div {transition:all 0.4s ease;}
+.ty-back a {border:1px solid rgba(255,255,255,0.5);  transition:all 0.4s ease 0.6s;}
+.ty-back div, .ty-back a {
+    width:130px; height:50px; margin:0 auto; 
+    font-family:'scdream4'; color:#F2F2F2; line-height:46px; 
+    border-radius:25px; opacity:0; 
+}
+.ty-back div:hover {background:rgba(215,45,45,0.9);}
+.dog:hover .ty-back {top:0;}
+.dog:hover .ty-back h4, .dog:hover .ty-back div, .dog:hover .ty-back a {opacity:1;}
+
+
+@media screen and (min-width:1400px){
+    .ty-info-wrap-mb, .ty-mb-title {display:none;}
+    /* ===== 배너 + 타이틀 ===== */
+    .ty-bn {width:100%; height:600px; background: url(../imgs/types/ty-bn.jpg) 0 center; background-size:cover;}
+    .ty-bn h2 {font-size:68px; bottom:170px;}
+    .ty-title-wrap {width:1000px; margin:150px auto 0; text-align:center;}
+    .ty-title-wrap h3 {font-size:50px;}
+    .ty-title-wrap p {padding-top:15px;}
+    /* ===== 데스크톱 시작 ===== */
+    .ty-info-wrap {position:relative; width:1400px; height:1110px; margin:50px auto 150px;}
+    .ty-info-wrap > .dogs {top:100px; padding:0 25px;}
+    .dogs > div:nth-child(4), .dogs > div:nth-child(5), .dogs > div:nth-child(6) {margin-top:50px;}
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1399px){
+    .ty-info-wrap-mb, .ty-mb-title {display:none;}
+    /* ===== 배너 + 타이틀 ===== */
+    .ty-bn {width:100%; height:500px; background: url(../imgs/types/ty-bn.jpg) center -95px; background-size:cover;}
+    .ty-bn h2 {font-size:64px; bottom:150px;}
+    .ty-title-wrap {width:1000px; margin:100px auto 0; text-align:center;}
+    .ty-title-wrap h3 {font-size:46px;}
+    .ty-title-wrap p {padding-top:10px;}
+    /* ===== 데스크톱 시작 ===== */
+    .ty-info-wrap {position:relative; width:1000px; height:1660px; margin:33px auto;}
+    .ty-info-wrap > .dogs {top:83px; width:100%; padding:0 50px;}
+    .dogs > div:nth-child(3), .dogs > div:nth-child(4), .dogs > div:nth-child(5), .dogs > div:nth-child(6) {margin-top:33px;}
+}
+
+
+/* ===== 모바일 공통 ===== */
+.ty-mb-title {padding:27px 0 10px; font-family:'scdream5'; font-size:24px; color:#021c30; font-weight:normal; text-align:center;}
+.ty-info-wrap-mb {margin:15px auto;}
+.flex-prev .bi, .flex-next .bi {font-size:42px; color:#333;}
+.dog {
+    width:100%; height:460px;
+    background:#FFF; border-radius:15px; overflow:hidden;
+}
+.ty-bg {width:100%; height:230px;}
+.dog .ty-text-wrap {padding:35px;}
+.dog .ty-text-wrap h4 {
+    font-family:'scdream5'; font-size:20px; font-weight:normal; line-height:24px;
+}
+.dog .ty-txt-1 {
+    height:80px; margin-bottom:10px; padding-top:16px;  
+    font-family:'scdream4'; line-height:18px;
+}
+.dog .ty-text-wrap a {
+    width:100px; height:45px; margin:0 auto;
+    font-family:'scdream4'; color:#F4F4F4; font-weight:600;
+    text-align:center; line-height:42px;
+    background:rgba(215,45,45,0.9); border-radius:25px;
+    transition:all 0.4s ease;
+}
+
+
+@media screen and (min-width:600px) and (max-width:999px) {    
+    .ty-info-wrap {display:none;}
+    /* ===== 배너 + 타이틀 ===== */
+    .ty-bn {width:100%; height:500px; background:url(../imgs/types/ty-bn.jpg) center center; background-size:cover;}
+    .ty-bn h2 {font-size:58px; bottom:110px;}
+    .ty-title-wrap {width:500px; margin:110px auto 0; text-align:center;}
+    .ty-title-wrap h3 {font-size:40px;}
+    .ty-title-wrap p {padding-top:8px;}
+    /* ===== 캐러셀 ===== */
+    .ty-info-wrap-mb {width:630px;}
+    .ty-info-wrap-mb.last {margin-bottom:140px;}
+    @media screen and (min-width:600px) and (max-width:699px){
+        .ty-info-wrap-mb {width:300px;}
+    }
+}
+
+
+@media screen and (max-width:599px) {
+    .ty-info-wrap {display:none;}
+    /* ===== 배너 + 타이틀 ===== */
+    .ty-bn {width:100%; height:565px; background:url(../imgs/types/ty-bn.jpg) center center; background-size:cover;}
+    .ty-bn h2 {width:260px; bottom:100px; margin-left:-130px; font-size:50px; line-height:60px;}
+    .ty-title-wrap {width:300px; margin:80px auto 0; text-align:center;}
+    .ty-title-wrap h3 {font-size:32px;}
+    .ty-title-wrap p {padding-top:5px;}
+    /* ===== 캐러셀 ===== */
+    .ty-info-wrap-mb {width:300px; margin:15px auto;}
+    .ty-info-wrap-mb.last {margin-bottom:120px;} 
+}

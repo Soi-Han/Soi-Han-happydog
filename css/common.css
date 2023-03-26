@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+body {width:100%; height:100vh;}
+header {position:fixed; left:0; top:0; width:100%; height:70px;}
+#main-menu > li {position:relative;}
+nav a, .ft-txt, .ft-sns a, h3 {color:#f2f2f2;}
+nav a:hover {color:#D31819;}
+nav a:nth-child(2)hover {color:#D31819;}
+@media screen and (min-width:1400px) {
+	/*===== header =====*/
+    #trigger, #main-symbol-logo, .mb {display:none;}
+
+    header {width:100%; z-index: 9; background:#021c30;}
+    nav {width:1300px; height:70px; margin:0 auto;}
+    
+    #main-logo {float:left; font-size:40px; color:#f2f2f2;}
+	#main-menu {float:left; margin-left:120px;}
+    #main-menu > li > a {width:150px; height:70px; font-size:16px; text-align:center; line-height:70px;}
+ 	#main-menu > li > a:hover {color:#D31819;}
+    .sub-menu {display:none; position:absolute; left:0; top:70px;}
+    .sub-menu > li {float:none; }
+    .sub-menu > li > a {width:150px; height:40px; text-align:center; line-height:38px; background:rgba(2,28,48,0.9);}
+    
+    .top-menu {float:right;}
+    .top-menu a  {padding:25px 10px; font-size:13px; color: #F2F2F2;}
+    nav .top-menu strong {padding:25px 10px; line-height: 70px; font-size:13px; color:#FFF;}
+	
+	
+	/*===== footer =====*/
+  	footer{width:100%; height:150px; margin-bottom:0; background:rgba(2,28,48,0.9);}
+    .ft-wrap {
+    display:flex; justify-content:space-between; 
+    width:1300px; margin:0 auto; padding-top:45px; 
+    font-size:13px;}
+    .ft-sns {line-height: 55px;}
+    .ft-sns a {font-size:26px; padding:0 20px;}
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1399px) {
+	/*===== header =====*/
+    #trigger, #main-symbol-logo, .mb {display:none;}
+
+    header {width:100%; z-index: 9; background:#021c30;}
+    nav {width:950px; height:70px; margin:0 auto;}
+    
+    #main-logo {float:left; font-size:40px; color:#f2f2f2;}
+	#main-menu {float:left; margin-left:120px;}
+    #main-menu > li > a {width:140px; height:70px; font-size:16px; text-align:center; line-height:70px;}
+
+    .sub-menu {display:none; position:absolute; left:-5px; top:70px;}
+    .sub-menu > li {float:none;}
+    .sub-menu > li > a {
+    	width:150px; height:40px; 
+    	text-align:center; line-height:38px; background:rgba(2,28,48,0.9);}
+    .top-menu {float:right;}
+    .top-menu a {padding:25px 5px; font-size:13px; color: #F2F2F2;}
+	nav .top-menu strong {padding:25px 10px; line-height: 70px; font-size:13px; color:#FFF;}
+
+	/*===== footer =====*/
+    footer{width:100%; height:150px; margin-bottom:0; background:rgba(2,28,48,0.9);}
+    .ft-wrap {display:flex; justify-content:space-between; width:950px; margin:0 auto; padding-top:45px;  font-size:13px;}
+    .ft-sns {line-height: 55px;}
+    .ft-sns a {font-size:26px; padding:0 20px;}
+}
+
+@media screen and (min-width:600px) and (max-width:999px) {
+	#main-symbol-logo, .dt {display:none; background:#021c30;}
+
+	header {width:100%; z-index:9; background:rgba(2,28,48,0.9);}
+	nav {display:flex; align-items:center; width:100%; height:70px; padding:0 30px;}
+	
+	#main-logo {position:absolute; left:50%; top:7px; transform:translateX(-50%); font-size:36px; color:#f2f2f2;}
+
+    .trigger {width:50px; height:50px;}
+    .trigger-click {width:100%; height:100%; cursor:pointer;}
+    .trigger > span {position:absolute; left:5%; height:2px; background:#8a7272; border-radius:1px; transition:all 0.4s ease;}
+    .trigger > span:nth-child(2) {top:23px; width:30px; margin-left:-18px; background:#F2F2F2;}
+    .trigger > span:nth-child(3) {top:33px; width:30px; margin-left:-18px;  background:#F2F2F2;}
+    .trigger > span:nth-child(4) {top:43px; width:30px; margin-left:-18px;  background:#F2F2F2;}
+    
+    #main-menu {
+        position:absolute; left:-1100px; top:70px; width:100%; height:100vh; 
+        background:rgba(2,28,48,1); opacity:1; z-index:99; transition:all 0.4s ease-in;
+    }
+    #main-menu > li, .sub-menu > li {float:none;}
+    #main-menu > li > a {padding:40px 0; font-size:24px; color:#F2F2F2; text-align:center;}
+    .sub-menu {display:none; background:rgba(193, 44, 44 ,0.9);}
+    .sub-menu > li > a {width:100%; height:80px; font-size:20px; text-align:center; line-height:80px;}
+   
+    
+    nav .top-menu {position:absolute; right:0; top:20px;}
+    nav .top-menu a {padding-right:15px; font-size:16px; line-height:32px;}
+   	nav .top-menu a:hover{color:#D31819;}
+
+    nav a:hover {color:#021c30; text-shadow:0 0 black;}
+    
+    /*===== #trigger 클릭했을 때 =====*/
+    .trigger.active > span:nth-child(2) {width:30px; transform:translateY(9px) rotate(-130deg); top:25px; background:#D31819;}
+    .trigger.active > span:nth-child(3) {opacity:0;}
+    .trigger.active > span:nth-child(4) {width:30px; transform:translateY(-9px) rotate(130deg); background:#D31819;}
+    #main-menu.active {left:0; opacity:1;}
+    #main-vi.active {left:0; opacity:1;}
+    .nav-box {left:0; opacity:1;}
+
+
+    /* ==== footer ==== */  
+     footer{width:100%; height:260px; margin-bottom:0; background:rgba(2,28,48,0.9);}
+    .ft-wrap {height:100%; margin:0 auto; text-align:center;}
+    .ft-txt {padding-top: 70px; font-size:13px; text-align:center; }
+    .ft-sns {display:flex; justify-content:center; align-items:center; margin:0 auto;}
+    .ft-sns li a {font-size:25px; padding:20px 20px; margin:0 auto;}
+}
+
+@media screen and (max-width:599px){
+	#main-logo, .dt {display:none;}
+
+	header {width:100%; z-index:9; background:rgba(2,28,48,0.9);}
+	nav {display:flex; align-items:center; width:100%; height:65px; padding:0 30px;}
+	
+	#main-symbol-logo {position:absolute; left:50%; top:7px; transform:translateX(-50%); font-size:36px;}
+
+    .trigger {width:50px; height:50px;}
+    .trigger-click {width:100%; height:100%; cursor:pointer;}
+    .trigger > span {position:absolute; height:2px; background:#8a7272; border-radius:1px; transition:all 0.4s ease;}
+    .trigger > span:nth-child(2) {top:23px; width:30px; margin-left:-18px; background:#F2F2F2;}
+    .trigger > span:nth-child(3) {top:33px; width:30px; margin-left:-18px;  background:#F2F2F2;}
+    .trigger > span:nth-child(4) {top:43px; width:30px; margin-left:-18px;  background:#F2F2F2;}
+    
+    #main-menu {
+        position:absolute; left:-1100px; top:65px; width:100%; height:100vh; background:rgba(2,28,48,1); opacity:1; transition:all 0.4s ease-in;
+    }
+    #main-menu > li, .sub-menu > li {float:none;}
+    #main-menu > li > a {padding:40px 0; font-size:24px; color:#F2F2F2; text-align:center;}
+    .sub-menu {display:none; background:rgba(193, 44, 44 ,0.9);}
+    .sub-menu > li > a {width:100%; height:80px; font-size:20px; text-align:center; line-height:80px;}
+    
+    nav .top-menu {position:absolute; right:0; top:20px;}
+    nav .top-menu a {padding-right:15px; font-size:16px; line-height:32px;}
+   	nav .top-menu a:hover{color:#D31819;}
+    nav a:hover {color:#021c30; text-shadow:0 0 black;}
+    
+    /*===== #trigger 클릭했을 때 =====*/
+    .trigger.active > span:nth-child(2) {width:30px; transform:translateY(9px) rotate(-130deg); top:25px; background:#D31819;}
+    .trigger.active > span:nth-child(3) {opacity:0;}
+    .trigger.active > span:nth-child(4) {width:30px; transform:translateY(-9px) rotate(130deg); background:#D31819;}
+    #main-menu.active {left:0; opacity:1;}
+    #main-vi.active {left:0; opacity:1;}
+    .nav-box {left:0; opacity:1;}
+
+	/* ==== footer ==== */
+    footer{
+    width:100%; height:260px; margin-bottom:0; 
+    background:rgba(2,28,48,0.9);
+    }
+    .ft-wrap {height:100%; margin:0 auto; text-align:center;}
+    .ft-txt {padding-top: 80px; font-size:10px; text-align:center;}
+    .ft-sns {display:flex; justify-content:center; align-items:center; margin:0 auto;}
+    .ft-sns li a {font-size:25px; padding:20px 20px; margin:0 auto;}
+}

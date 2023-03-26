@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyDog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/visit.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/index_dropdown.js"></script>
+  <script src="js/index_navgation.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="trigger">
+            <div class="trigger-click"></div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>
+            <a href="index.html" id="main-logo">HappyDog</a>
+            <a href="index.html" id="main-symbol-logo"><img src="imgs/index/symbol-logo.png" alt="happydog"></a>
+        </h1>
+        
+
+        <div class="nav-box">
+            <ul id="main-menu">
+                <li>
+                    <a href="#">ABOUT</a>
+                    <ul class="sub-menu">
+                        <li><a href="process.html">분양과정</a></li>
+                        <li><a href="types.html">분양견종류</a></li>
+                    </ul>
+                </li>
+                <li><a href="visit.html">VISIT</a></li>
+            </ul>
+            <ul class="top-menu">
+                <li>
+                    <div class="login">
+                        <a href="#">LOGIN</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="join">
+                        <a href="#">JOIN</a>
+                    </div>
+                </li>
+            </ul>
+        </div> <!-- nav-box : end -->       
+    </nav>
+</header>
+<div class="clear"></div>
+<!--베너-->
+<div class="vs-bn-wrap">
+    <div class="vs-bn">
+        <h2><span class="vs-bn-sc-1">vi</span><span class="vs-bn-sc-2">sit</span></h2>
+    </div>
+</div>
+
+<!--타이틀-->
+<h5>방문 상담 예약</h5>
+<p>단 한 분의 고객님과 1:1 분양 매치 진행합니다.<br>방문 상담 가능한 일자를 예약해보세요.</p>
+
+<!--content-->
+<div class="visit-container">
+    <form name="visitRegFrm" action="../visit/visitPro.jsp" method="post">
+        <ul class="vsFrm">
+            <li><input type="text" name="id" placeholder="아이디 입력" class="input-box" autofocus required></li>
+            <li><input type="text" name="visitName" placeholder="방문자 이름 입력" class="input-box"></li>
+            <li>
+                <select name="location" class="input-box" >
+                    <option value="0" selected>방문 지점을 선택하세요.</option>
+                    <option value="용인 기흥점">용인 기흥점</option>
+                    <option value="수원 광교점">수원 광교점</option>
+                    <option value="천안 천안점">천안 천안점</option>
+                </select>
+            </li>
+            <li><input type="date" name="date" class="input-box"></li>
+            <li><input type="time" name="hour" class="input-box"></li>
+            <li>
+                <select name="sellTime" class="input-box">
+                    <option value="0" selected>분양 횟수를 선택하세요.</option>
+                    <option value="0">없음</option>
+                    <option value="1">1번</option>
+                    <option value="2">2번</option>
+                    <option value="3">3번</option>
+                    <option value="4">4번</option>
+                </select>
+            </li>
+            <li>
+                <select name="visitTime" class="input-box" >
+                    <option value="0" selected>방문 상담 횟수를 선택하세요.</option>
+                    <option value="0">없음</option>
+                    <option value="1">1번</option>
+                    <option value="2">2번</option>
+                    <option value="3">3번</option>
+                    <option value="4">4번</option>
+                </select>
+            </li>
+        </ul>
+        <div class="flex-visitFrm">
+	        <button onClick="visitCheck()" class="bt-visitFrm bt-yellow">제출</button>
+	 		<button type="reset" class="bt-resetFrm bt-red">다시쓰기</button>
+			<a href="#" class="bt bt-loginFrm bt-green">로그인</a>
+			<a href="#" class="bt bt-joinFrm bt-blue">회원가입</a>
+		</div>
+		<div class="clear"></div>
+    </form>
+</div>
+
+<!--푸터-->
+<footer>
+    <div class="ft-wrap">
+        <div class="ft-txt">
+                (주)HappyDog <br>
+                Addr : 197road, 12, WorldcupSagang-ro, Seo-gu, Gwangju, Korea <br>
+                사업자등록번호 : 123-45-67890  |  통신판매업신고번호 : 2020-광주북구-0408
+        </div>
+        <ul class="ft-sns">
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></li> 
+            <li><a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
